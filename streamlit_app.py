@@ -8,7 +8,7 @@ st.title("Obispado Barbastro Monzón")
 st.header("Buscar registros")
 query = st.text_input("Nombre a buscar:")
 if st.button("Buscar"):
-    response = requests.get('https://github.com/robertrb63/parroquias/blob/main/db.json/buscar', params={'query': query})
+    response = requests.get('https://github.com/robertrb63/parroquias/blob/main/db.json/buscar', "r", encoding="utf-8", params={'query': query})
     resultados = response.json()
     st.write(resultados)
 
@@ -26,7 +26,7 @@ if st.button("Crear"):
         "email": email,
         # Agrega más campos
     }
-    response = requests.post('https://github.com/robertrb63/parroquias/blob/main/db.json/crear', json={"password": password, "registro": nuevo_registro})
+    response = requests.post('https://github.com/robertrb63/parroquias/blob/main/db.json/crear', "r", encoding="utf-8", json={"password": password, "registro": nuevo_registro})
     st.write(response.json())
 
 # Actualizar y borrar registros
