@@ -26,7 +26,7 @@ if st.button("Crear"):
         "email": email,
         # Agrega más campos
     }
-    response = requests.post('http://127.0.0.1:5000/crear', json={"password": password, "registro": nuevo_registro})
+    response = requests.post('https://github.com/robertrb63/parroquias/blob/main/streamlit_app.py/crear', json={"password": password, "registro": nuevo_registro})
     st.write(response.json())
 
 # Actualizar y borrar registros
