@@ -8,7 +8,7 @@ st.title("Obispado Barbastro Monzón")
 st.header("Buscar registros")
 query = st.text_input("Nombre a buscar:")
 if st.button("Buscar"):
-    response = requests.get('http://127.0.0.1:5000/buscar', params={'query': query})
+    response = requests.get('https://github.com/robertrb63/parroquias/blob/main/streamlit_app.py/buscar', params={'query': query})
     resultados = response.json()
     st.write(resultados)
 
